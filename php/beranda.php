@@ -705,7 +705,7 @@ if (isset($_GET['edit'])) {
                         <input type="email" name="email" class="form-control" placeholder="Email" value="<?= $contact ? $contact['email'] : '' ?>" required />
                     </div>
                     <div class="form-group">
-                        <input type="text" name="no_telp" class="form-control" placeholder="No Telp" value="<?= $contact ? $contact['no_telp'] : '' ?>" required />
+                        <input type="tel" name="no_telp" class="form-control" placeholder="No Telp" value="<?= $contact ? $contact['no_telp'] : '' ?>" required pattern="[0-9]*" oninput="this.value=this.value.replace(/[^0-9]/g,'');" />
                     </div>
                     <div class="form-group">
                         <input type="pesan" name="pesan" class="form-control" placeholder="Pesan" value="<?= $contact ? $contact['pesan'] : '' ?>" required />
